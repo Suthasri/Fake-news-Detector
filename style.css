@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 700px;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    resize: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #ffecb3;
+}
+
+/* 3D Flip Card */
+.card-3d {
+    width: 300px;
+    height: 150px;
+    margin: 30px auto 0;
+    perspective: 1000px;
+}
+
+.card-3d .card-face {
+    width: 100%;
+    height: 100%;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card-3d:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card-3d:hover .back {
+    transform: rotateY(0deg);
+}
+
+.card-3d .front {
+    transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.card-3d .back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    background: #f7f7f7;
+}
+
+.result-text {
+    font-size: 1.5em;
+    color: #1e88e5;
+    font-weight: bold;
+}
